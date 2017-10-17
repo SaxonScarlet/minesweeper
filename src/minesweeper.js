@@ -1,21 +1,19 @@
-// Variables
-// Represents empty row with three columns
-const blankLine = '   |   |   ';
-// Guess row - represents row when a player guesses (Hardcoded)
-const guessLine = ' 1 |   |   ';
-// Bomb row - represents row when a player reveals a bomb (Hardcoded)
-const bombLine =  '   | B |   ';
+const printBoard = board => {
+  console.log('Current Board: ');
+  console.log(board[0].join(' | '));
+  console.log(board[1].join(' | '));
+  console.log(board[2].join(' | '));
+};
 
-// Empty board section
-console.log('This is what an empty board will look like:');
+const board = [
+  ['  ', ' ', '  '],
+  ['  ', ' ', '  '],
+  ['  ', ' ', '  ']
+];
 
-console.log(blankLine);
-console.log(blankLine);
-console.log(blankLine);
+printBoard(board);
 
-// Guess and Bomb section
-console.log('This is what a board with a guess and a bomb on it would look like:');
+board[0][1] = 1;
+board[2][2] = 'B';
 
-console.log(guessLine);
-console.log(bombLine);
-console.log(blankLine);
+printBoard(board);
