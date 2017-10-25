@@ -8,9 +8,11 @@ const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
     };
     board.push(row);
   };
+  
   return board;
 };
 
+// Generate Random Bomb Board with Nested Array
 const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
   const board = [];
   for (let rows = 0; rows < numberOfRows; rows++) {
